@@ -53,25 +53,23 @@ with col2:
 
 st.subheader("🩸 Golongan Darah & Profil Anak")
 col3, col4, col5 = st.columns(3)
-with col3:
-    father_blood_group = st.selectbox(
-        "Golongan Darah Ayah", 
-        ['O+', 'A+', 'A-', 'B-', 'O-', 'AB+', 'B+', 'AB-']
-    )
-with col4:
-    mother_blood_group = st.selectbox(
-        "Golongan Darah Ibu", 
-        ['B+', 'A+', 'AB-', 'O+', 'AB+', 'A-', 'O-', 'B-']
-    )
-with col5:
-    child_gender = st.selectbox(
-        "Jenis Kelamin Anak", 
-        ['Female', 'Male']
-    )
-    child_blood_group = st.selectbox(
-        "Golongan Darah Ayah", 
-        ['O+', 'A+', 'A-', 'B-', 'O-', 'AB+', 'B+', 'AB-']
-    )
+father_blood_group = st.selectbox(
+    "Golongan Darah Ayah",
+    ['O+', 'A+', 'A-', 'B-', 'O-', 'AB+', 'B+', 'AB-'],
+    key="father_blood"
+)
+
+mother_blood_group = st.selectbox(
+    "Golongan Darah Ibu",
+    ['B+', 'A+', 'AB-', 'O+', 'AB+', 'A-', 'O-', 'B-'],
+    key="mother_blood"
+)
+
+child_blood_group = st.selectbox(
+    "Golongan Darah Anak",
+    ['O+', 'A+', 'A-', 'B-', 'O-', 'AB+', 'B+', 'AB-'],
+    key="child_blood"
+)
 
 st.subheader("👁️🧬 Ciri Fisik Genetik")
 col6, col7, col8 = st.columns(3)
