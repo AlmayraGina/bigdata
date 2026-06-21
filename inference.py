@@ -37,9 +37,11 @@ FEATURE_NAMES = [
 ]
 
 
-def model_fn(model_dir: str):
-    """Load the pickled sklearn Pipeline from model.joblib."""
-    return joblib.load(os.path.join(model_dir, "model_parental.joblib"))
+def model_fn(model_dir):
+
+    return joblib.load(
+        os.path.join(model_dir, "model_parental_logreg.pkl")
+    )
 
 
 def input_fn(request_body, request_content_type: str) -> pd.DataFrame:
